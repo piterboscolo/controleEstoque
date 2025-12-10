@@ -1,0 +1,405 @@
+{
+  "materiais": [
+    {
+      "id": "17653023649779jw7a0sqj",
+      "nome": "Cabo HDMI x HDMI",
+      "tipo": "Material de Informatica",
+      "quantidade": 51,
+      "quantidade_disponivel": 51,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765302441598zcgvbe3p1",
+      "nome": "Cabo HDMI x DVI",
+      "tipo": "Material de Informatica",
+      "quantidade": 47,
+      "quantidade_disponivel": 47,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765302478357adc7kft0c",
+      "nome": "Cabo DP x DP",
+      "tipo": "Material de Informatica",
+      "quantidade": 125,
+      "quantidade_disponivel": 125,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765302529957yfkxtaj4m",
+      "nome": "Cabo DVI x DVI",
+      "tipo": "Material de Informatica",
+      "quantidade": 14,
+      "quantidade_disponivel": 14,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765302556342jcmjhlzgr",
+      "nome": "Cabo VGA x VGA",
+      "tipo": "Material de Informatica",
+      "quantidade": 39,
+      "quantidade_disponivel": 39,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765302580780h0ek3pabq",
+      "nome": "Cabo VGA x USB",
+      "tipo": "Material de Informatica",
+      "quantidade": 13,
+      "quantidade_disponivel": 13,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765302724783kmhnkzp7j",
+      "nome": "Teclado c/ fio",
+      "tipo": "Material Periférico",
+      "quantidade": 57,
+      "quantidade_disponivel": 57,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765302775346y7njy1khk",
+      "nome": "Mouse com fio",
+      "tipo": "Material Periférico",
+      "quantidade": 8,
+      "quantidade_disponivel": 8,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303040257zw3nwja6s",
+      "nome": "Cabo DP x  DVI",
+      "tipo": "Material de Informatica",
+      "quantidade": 3,
+      "quantidade_disponivel": 3,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303059339zxqmu9xe7",
+      "nome": "Adp VGA x USB",
+      "tipo": "Material de Informatica",
+      "quantidade": 8,
+      "quantidade_disponivel": 8,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303069995h32pbrh03",
+      "nome": "Adp HDMI x DP",
+      "tipo": "Material de Informatica",
+      "quantidade": 2,
+      "quantidade_disponivel": 2,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303137889wy1gufd9x",
+      "nome": "Placa de Video",
+      "tipo": "Material de Informatica",
+      "quantidade": 8,
+      "quantidade_disponivel": 8,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "176530318678310h7a63p3",
+      "nome": "Kit Lenovo Tec + Mouse s/fio",
+      "tipo": "Material Periférico",
+      "quantidade": 14,
+      "quantidade_disponivel": 14,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303202839amthz21gj",
+      "nome": "Teclado Lenovo c/ fio",
+      "tipo": "Material Periférico",
+      "quantidade": 3,
+      "quantidade_disponivel": 3,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303214735xly3k9p1f",
+      "nome": "Mouse Lenovo c/ fio",
+      "tipo": "Material Periférico",
+      "quantidade": 7,
+      "quantidade_disponivel": 7,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653032358794ioq99bkg",
+      "nome": "Cx Som Multilaser",
+      "tipo": "Material Periférico",
+      "quantidade": 34,
+      "quantidade_disponivel": 34,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303246047bs2s42o76",
+      "nome": "Cx Som Bright",
+      "tipo": "Material Periférico",
+      "quantidade": 10,
+      "quantidade_disponivel": 10,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303260358n8lka5abh",
+      "nome": "Leitor disco Lenovo",
+      "tipo": "Material Periférico",
+      "quantidade": 32,
+      "quantidade_disponivel": 32,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "176530327203958gdx7g1e",
+      "nome": "Leitor de disco",
+      "tipo": "Material Periférico",
+      "quantidade": 63,
+      "quantidade_disponivel": 63,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303322717n1x4djuk5",
+      "nome": "Cart 194 Magenta",
+      "tipo": "Material de Impressora",
+      "quantidade": 9,
+      "quantidade_disponivel": 9,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303334877i205m577v",
+      "nome": "Cart 194 Cyano",
+      "tipo": "Material de Impressora",
+      "quantidade": 9,
+      "quantidade_disponivel": 9,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653033455323xwdl3x6c",
+      "nome": "Cart 194 Yellow",
+      "tipo": "Material de Impressora",
+      "quantidade": 9,
+      "quantidade_disponivel": 9,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303356196pckpm74ah",
+      "nome": "Cart 194 Black",
+      "tipo": "Material de Impressora",
+      "quantidade": 7,
+      "quantidade_disponivel": 7,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303378764zmpknd256",
+      "nome": "Bulk Ink Yellow",
+      "tipo": "Material de Impressora",
+      "quantidade": 7,
+      "quantidade_disponivel": 7,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303396306vywzqyhon",
+      "nome": "Bulk Ink Cyano",
+      "tipo": "Material de Impressora",
+      "quantidade": 7,
+      "quantidade_disponivel": 7,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303409364j8hmj6yf4",
+      "nome": "Bulk Ink Magenta",
+      "tipo": "Material de Impressora",
+      "quantidade": 7,
+      "quantidade_disponivel": 7,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303420489cfo7hn8iw",
+      "nome": "Bulk Ink Black",
+      "tipo": "Material de Impressora",
+      "quantidade": 5,
+      "quantidade_disponivel": 5,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653034649625wu586nmn",
+      "nome": "Cart Plotter Black",
+      "tipo": "Material de Impressora",
+      "quantidade": 3,
+      "quantidade_disponivel": 3,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303484107gcqj0c52s",
+      "nome": "Cart Plotter Yellow",
+      "tipo": "Material de Impressora",
+      "quantidade": 5,
+      "quantidade_disponivel": 5,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303501250cyngesqbb",
+      "nome": "Cart Plotter Magenta",
+      "tipo": "Material de Impressora",
+      "quantidade": 5,
+      "quantidade_disponivel": 5,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653035153847zvcz9ff4",
+      "nome": "Cart Plotter Ciano",
+      "tipo": "Material de Impressora",
+      "quantidade": 5,
+      "quantidade_disponivel": 5,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303545070hmsxgmvyl",
+      "nome": "Pen Drive 8Gb",
+      "tipo": "Material Periférico",
+      "quantidade": 23,
+      "quantidade_disponivel": 23,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653035654261kpd1m5t9",
+      "nome": "Hub USB",
+      "tipo": "Material Periférico",
+      "quantidade": 11,
+      "quantidade_disponivel": 11,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303576616n4li1v95v",
+      "nome": "Fonte 600W",
+      "tipo": "Material Periférico",
+      "quantidade": 9,
+      "quantidade_disponivel": 9,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303589055adm1xf7rr",
+      "nome": "Webcan Brigth",
+      "tipo": "Material Periférico",
+      "quantidade": 21,
+      "quantidade_disponivel": 21,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303602894k6inymdrn",
+      "nome": "Webcan Warroiw",
+      "tipo": "Material Periférico",
+      "quantidade": 39,
+      "quantidade_disponivel": 39,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303630200o4brkef5e",
+      "nome": "Limpa contato",
+      "tipo": "Outros",
+      "quantidade": 11,
+      "quantidade_disponivel": 11,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653036417439gbbz5ixi",
+      "nome": "Desingripante",
+      "tipo": "Outros",
+      "quantidade": 8,
+      "quantidade_disponivel": 8,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653036589915plhi98m2",
+      "nome": "Cabo de Energia",
+      "tipo": "Outros",
+      "quantidade": 184,
+      "quantidade_disponivel": 184,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303777646p9cxejcq3",
+      "nome": "Benjamin",
+      "tipo": "Outros",
+      "quantidade": 53,
+      "quantidade_disponivel": 53,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653038431532d8ox9dcf",
+      "nome": "SSD",
+      "tipo": "Material de Informatica",
+      "quantidade": 37,
+      "quantidade_disponivel": 37,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303863154c2sxzk7ki",
+      "nome": "Mem Ram 8Gb DDR3",
+      "tipo": "Material Periférico",
+      "quantidade": 36,
+      "quantidade_disponivel": 36,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303878743g9r4uz6ya",
+      "nome": "Mem Ram 4Gb DDR3",
+      "tipo": "Material Periférico",
+      "quantidade": 2,
+      "quantidade_disponivel": 2,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303889940vmctjzpn4",
+      "nome": "Proc I7",
+      "tipo": "Material Periférico",
+      "quantidade": 2,
+      "quantidade_disponivel": 2,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303905066h317rwiu5",
+      "nome": "Proc. i5",
+      "tipo": "Material de Informatica",
+      "quantidade": 2,
+      "quantidade_disponivel": 2,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653039157927k35uy82k",
+      "nome": "Proc i3",
+      "tipo": "Material de Informatica",
+      "quantidade": 3,
+      "quantidade_disponivel": 3,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653039309816t9idz2dm",
+      "nome": "Proc AMD Sempron",
+      "tipo": "Material de Informatica",
+      "quantidade": 15,
+      "quantidade_disponivel": 15,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "17653039549450d1e9mdz8",
+      "nome": "Proc AMD Phenon",
+      "tipo": "Material de Informatica",
+      "quantidade": 3,
+      "quantidade_disponivel": 3,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765303979446o7adi3val",
+      "nome": "Proc AMD Athlon",
+      "tipo": "Material de Informatica",
+      "quantidade": 7,
+      "quantidade_disponivel": 7,
+      "data_entrada": "2025-12-09"
+    },
+    {
+      "id": "1765304275657iw1dv2oct",
+      "nome": "Filtro de Linha",
+      "tipo": "Outros",
+      "quantidade": 54,
+      "quantidade_disponivel": 54,
+      "data_entrada": "2025-12-09"
+    }
+  ],
+  "saidas": []
+}

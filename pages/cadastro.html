@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Material - Controle de Materiais</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Estilos para os botões de ação na tabela */
+        .acoes {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .btn-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .btn-icon:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-icon .material-icons {
+            font-size: 1.2em;
+        }
+
+        .btn-excluir .material-icons {
+            color: #e74c3c;
+        }
+
+        .btn-excluir:hover .material-icons {
+            color: #c0392b;
+        }
+
+        .btn-editar .material-icons {
+            color: #f39c12;
+        }
+
+        .btn-editar:hover .material-icons {
+            color: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastrar Material</h1>
+            <nav>
+                <a href="../index.html">Dashboard</a>
+                <a href="cadastro.html" class="active">Cadastrar Material</a>
+                <a href="saida.html">Registrar Saída</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <h2>Informações do Material</h2>
+                <form id="form-cadastro">
+                    <div class="form-group">
+                        <label for="nome">Nome do Material:</label>
+                        <input type="text" id="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tipo">Tipo:</label>
+                        <select id="tipo" class="form-control" required>
+                            <!-- Opções serão preenchidas via JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" id="quantidade" min="1" required>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="data-entrada">Data de Entrada:</label>
+                        <input type="date" id="data-entrada" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn" id="btn-salvar">
+                            <span class="material-icons">save</span> Salvar Material
+                        </button>
+                        <button type="button" class="btn btn-edit" id="btn-editar" style="display: none;">
+                            <span class="material-icons">edit</span> Atualizar
+                        </button>
+                        <button type="button" class="btn btn-danger" id="btn-excluir" style="display: none;">
+                            <span class="material-icons">delete</span> Excluir
+                        </button>
+                        <a href="../index.html" class="btn">
+                            <span class="material-icons">cancel</span> Cancelar
+                        </a>
+                    </div>
+                    <input type="hidden" id="material-id">
+                </form>
+            </div>
+
+            <div class="recentes" style="margin-top: 2rem;">
+                <h2>Últimos Materiais Cadastrados</h2>
+                <div id="lista-materiais" class="tabela-container">
+                    <!-- Lista de materiais será preenchida via JavaScript -->
+                </div>
+                <div id="paginacao" style="margin-top: 1rem; display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- Controles de paginação serão preenchidos via JavaScript -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de confirmação -->
+    <div id="modal-confirmacao" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Material Cadastrado!</h2>
+            <p>O material foi cadastrado com sucesso.</p>
+            <button id="btn-fechar-modal" class="btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Scripts do sistema -->
+    <script src="../js/material.js"></script>
+    <!-- Firebase SDK (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script>
+      window.FIREBASE_CONFIG = window.FIREBASE_CONFIG || {
+        apiKey: "Q7z5NVe9u2ezWJ3d4eY8Vaay_kz2dOCuJuo3IZYi_Ao",
+        authDomain: "controledp-139db.firebaseapp.com",
+        projectId: "controledp-139db",
+        storageBucket: "controledp-139db.appspot.com",
+        messagingSenderId: "",
+        appId: ""
+      };
+    </script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script>
+        // Função para inicializar a aplicação quando todos os scripts estiverem carregados
+        function inicializarAplicacao() {
+            console.log('Inicializando aplicação...');
+            
+            if (typeof MaterialAPI === 'undefined') {
+                console.error('Erro: MaterialAPI não está disponível');
+                alert('Erro ao carregar as funções necessárias. Por favor, recarregue a página.');
+                return;
+            }
+            
+            if (typeof initApp === 'function') {
+                console.log('Chamando initApp...');
+                initApp();
+            } else {
+                console.error('Erro: Função initApp não encontrada');
+            }
+        }
+        
+        // Verifica se o DOM já está carregado
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', inicializarAplicacao);
+        } else {
+            // DOM já está carregado, inicializa imediatamente
+            setTimeout(inicializarAplicacao, 0);
+        }
+    </script>
+    <script src="../js/app.js"></script>
+
+</body>
+</html>

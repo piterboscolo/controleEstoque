@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Materiais de Informática</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="img/DP.png" alt="Logo" class="logo">
+                <h1>Controle de Materiais</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Dashboard</a>
+                <a href="pages/cadastro.html">Cadastrar Material</a>
+                <a href="pages/saida.html">Registrar Saída</a>
+            </nav>
+        </header>
+
+        <main class="dashboard-container">
+            <h2>Visão Geral dos Materiais</h2>
+            <div class="dashboard">
+                <!-- Cards de materiais serão inseridos aqui dinamicamente -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts do localStorage -->
+    <script src="js/material.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+      // Log de inicialização
+      console.log('Página carregada. Iniciando aplicação...');
+      
+      // Testa a conexão com a API quando a página carregar
+      document.addEventListener('DOMContentLoaded', async () => {
+        console.log('DOM completamente carregado');
+        await testConnection();
+      });
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>

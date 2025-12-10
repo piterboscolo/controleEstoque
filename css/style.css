@@ -1,0 +1,945 @@
+/* Estilos Gerais */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --gray-color: #95a5a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 15px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--secondary-color);
+}
+
+/* Cards do Dashboard */
+.dashboard-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+/* Texto Visão Geral dos Materiais */
+.dashboard-container h2 {
+    color: #15045f;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 0 10px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0 5px;
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+
+.dashboard-totais {
+    display: none; /* Removendo totais conforme solicitado anteriormente */
+}
+
+.card {
+    background: white;
+    padding: 0.8rem 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(165, 15, 15, 0.05);
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+    border-left: 4px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.08);
+}
+/* texto card Nome do Material */
+.card-nome {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0e0772;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* texto card Nome do Tipo */
+.card-tipo {
+    font-size: 1rem;
+    color: #0b9ba5;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    background: #f8f9fa;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    display: inline-block;
+}
+/* texto card Quantidade */
+.card-quantidade {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0b3d9b;
+    line-height: 1;
+    margin: 0.2rem 0 0.1rem;
+}
+
+.card-total {
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: block;
+    margin-top: -2px;
+}
+
+.card-verde {
+    border-left-color: var(--success-color);
+}
+
+.card-verde:hover {
+    box-shadow: 0 4px 8px rgba(46, 204, 113, 0.2);
+}
+
+.card-laranja {
+    border-left-color: #f39c12;
+}
+
+.card-laranja:hover {
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.2);
+}
+
+.card-vermelho {
+    border-left-color: var(--danger-color);
+}
+
+.card-vermelho:hover {
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.2);
+}
+
+.card .material-icons,
+.card .tipo-texto {
+    font-size: 3rem;
+    color: #7f8c8d;
+    margin-bottom: 0.8rem;
+    display: block;
+    line-height: 1.2;
+}
+
+.card .tipo-texto {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.card .nomes-materiais {
+    font-size: 0.9rem;
+    color: #34495e;
+    margin: 0.25rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .quantidade-info {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 0.5rem 0 1rem;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 0.5rem 0 1rem;
+}
+
+.card-status {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.status-bar {
+    height: 6px;
+    background-color: #ecf0f1;
+    border-radius: 3px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+
+.status-fill {
+    height: 100%;
+    background-color: #2ecc71;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.card-verde .status-fill {
+    background-color: #2ecc71;
+}
+
+.card-laranja .status-fill {
+    background-color: #f39c12;
+}
+
+.card-vermelho .status-fill {
+    background-color: #e74c3c;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .material-icons {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+    color: var(--gray-color);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+/* Seção de Materiais Recentes */
+.recentes {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.recentes h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Tabelas */
+.tabela-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo específico para o select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+    padding-right: 2.5rem;
+}
+
+button, .btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-edit {
+    background-color: #f39c12;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #d35400;
+}
+
+/* Botões de Ação */
+.acoes {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.btn-icon .material-icons {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.btn-icon:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para o cabeçalho da coluna Ações */
+.acoes-header {
+    text-align: center;
+    min-width: 120px;
+}
+
+/* Estilo para os botões de ação na tabela */
+.acoes {
+    display: flex !important;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 40px;
+}
+
+/* Estilo base para os botões de ícone */
+.btn-icon {
+    background: none;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 34px;
+    height: 34px;
+    margin: 0 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para os ícones dentro dos botões */
+.btn-icon .material-icons {
+    font-size: 1.2em !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* Impede que o ícone bloqueie o clique no botão */
+}
+
+/* Estilo específico para o botão de excluir */
+.btn-excluir {
+    color: #e74c3c;
+    border-color: #f5c6cb;
+    background-color: #f8d7da;
+}
+
+.btn-excluir .material-icons {
+    color: #e74c3c !important;
+}
+
+.btn-excluir:hover {
+    background-color: #f8d7da;
+    border-color: #f1b0b7;
+}
+
+.btn-excluir:hover .material-icons {
+    color: #c0392b !important;
+}
+
+/* Estilo para o botão de editar */
+.btn-editar {
+    color: #f39c12;
+    border-color: #ffeeba;
+    background-color: #fff3cd;
+}
+
+.btn-editar .material-icons {
+    color: #f39c12 !important;
+}
+
+.btn-editar:hover {
+    background-color: #fff3cd;
+    border-color: #ffe8a1;
+}
+
+.btn-editar:hover .material-icons {
+    color: #d35400 !important;
+}
+
+/* Garante que os botões não fiquem esmagados em telas pequenas */
+@media (max-width: 768px) {
+    .acoes {
+        flex-wrap: nowrap;
+        gap: 4px;
+    }
+    
+    .btn-icon {
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray-color);
+}
+
+/* Responsividade */
+/* Estilos para o histórico de saídas */
+.historico-saidas {
+    margin-top: 2rem;
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.historico-saidas h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Estilos para as tabelas */
+.materiais-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.materiais-table th,
+.materiais-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.materiais-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.materiais-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.materiais-table .acoes {
+    white-space: nowrap;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem 0;
+}
+
+/* Estilos para a tabela de histórico */
+#tabela-historico {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+#tabela-historico th,
+#tabela-historico td {
+    padding: 0.7rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+#tabela-historico th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    white-space: nowrap;
+}
+
+#tabela-historico tr:hover {
+    background-color: #f8f9fa;
+}
+
+#tabela-historico .pago {
+    color: #2ecc71;
+    font-weight: 500;
+}
+
+#tabela-historico .pendente {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+/* Estilos para os botões de ação na tabela */
+#tabela-historico .acoes {
+    text-align: center;
+    width: 60px;
+}
+
+#tabela-historico .btn-excluir {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+#tabela-historico .btn-excluir:hover {
+    background-color: #f8d7da;
+}
+
+#tabela-historico .btn-excluir .material-icons {
+    font-size: 1.2em;
+}
+
+/* Estilos para o modal de recibo */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilos para o recibo */
+.recibo-container {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    font-size: 12px;
+}
+
+.recibo-cabecalho-oficial {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.recibo-cabecalho-oficial .text-center {
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.recibo-cabecalho-oficial .text-center div {
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.recibo-numero {
+    font-weight: bold;
+    font-size: 13px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.recibo-titulo {
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.recibo-data {
+    text-align: right;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.recibo-conteudo {
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+.recibo-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 12px;
+}
+
+.recibo-tabela th,
+.recibo-tabela td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+.recibo-tabela th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.recibo-observacoes {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.recibo-observacoes p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.recibo-entrega {
+    margin: 25px 0;
+    padding: 15px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.recibo-entrega p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.recibo-rodape {
+    margin-top: 40px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.recibo-rodape p {
+    margin: 5px 0;
+}
+
+.assinatura {
+    margin-top: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+.linha-assinatura {
+    border-top: 1px solid #000;
+    width: 200px;
+    margin: 0 auto 5px;
+}
+
+.recibo-acoes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilos para impressão */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    
+    .modal,
+    .modal * {
+        visibility: visible;
+    }
+    
+    .modal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        background: white;
+    }
+    
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+    
+    .recibo-container {
+        border: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 0.7rem;
+    }
+    
+    .card {
+        padding: 0.6rem 0.4rem;
+        min-height: 85px;
+    }
+    
+    .card-nome {
+        font-size: 0.85rem;
+    }
+    
+    .card-tipo {
+        font-size: 0.7rem;
+    }
+    
+    .card-quantidade {
+        font-size: 1rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}

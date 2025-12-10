@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saída de Materiais (Básica)</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    .row { display:flex; gap:8px; align-items:center; }
+    .col { flex:1 1 0; }
+    .tabela-container { overflow:auto; }
+    .divider { height:1px; background:#eee; margin:16px 0; }
+    .small { color:#666; font-size:12px; }
+    .badge { background:#eef5ff; color:#2c6ac9; padding:2px 8px; border-radius:12px; font-size:0.85em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Saída de Materiais</h1>
+      <nav>
+        <a href="../index.html">Dashboard</a>
+        <a href="cadastro.html">Cadastrar Material</a>
+        <a href="saida.html" class="active">Saída</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2>Registrar Saída</h2>
+        <div class="row">
+          <div class="col">
+            <label for="sel-material">Material</label>
+            <select id="sel-material">
+              <option value="">Selecione um material</option>
+            </select>
+            <div class="small">Disponível: <span id="disp" class="badge">0</span> <span id="tipo" class="small"></span></div>
+          </div>
+          <div style="width:130px">
+            <label for="qtd">Qtd</label>
+            <input id="qtd" type="number" min="1" value="1" />
+          </div>
+          <div style="width:180px">
+            <label for="data">Data</label>
+            <input id="data" type="date" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="resp">Pago a</label>
+            <input id="resp" type="text" placeholder="Nome de quem recebe" />
+          </div>
+          <div class="col">
+            <label for="recibo">Nº Recibo (após DP-)</label>
+            <input id="recibo" type="text" placeholder="Ex: 01/123/25" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="serie">Nº Série/Patrimônio (opcional)</label>
+            <input id="serie" type="text" placeholder="Número de série/patrimônio" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="issuer-select">Entregue por</label>
+            <select id="issuer-select">
+              <option value="consoli">Subten PM Consoli</option>
+              <option value="murilo">CB PM Murilo</option>
+              <option value="divino">CB PM Divino</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:8px">
+          <button id="btn-sair" class="btn" disabled><span class="material-icons"></span> Registrar Saída</button>
+          <button id="btn-recarregar" class="btn btn-secondary"><span class="material-icons">refresh</span> Recarregar</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Materiais</h2>
+        <div class="row" style="margin-bottom:8px">
+          <div class="col">
+            <label for="busca">Buscar</label>
+            <input id="busca" type="text" placeholder="Nome ou tipo" autocomplete="off" />
+          </div>
+          <div class="col" style="max-width:220px">
+            <label for="filtro">Filtro</label>
+            <select id="filtro">
+              <option value="todos">Todos</option>
+              <option value="disponiveis">Somente com estoque</option>
+            </select>
+          </div>
+          <div class="col" style="max-width:220px">
+            <label for="ordenacao">Ordenar</label>
+            <select id="ordenacao">
+              <option value="nome_asc">Nome (A-Z)</option>
+              <option value="nome_desc">Nome (Z-A)</option>
+              <option value="estoque_desc">Estoque (maior)</option>
+              <option value="estoque_asc">Estoque (menor)</option>
+            </select>
+          </div>
+          <div class="small" id="resumo">-- itens</div>
+        </div>
+        <div class="tabela-container">
+          <table id="tab-materiais">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Disponível</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-materiais">
+              <tr><td colspan="3" style="text-align:center">Carregando...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3>Histórico (10 mais recentes)</h3>
+        <div class="tabela-container">
+          <table id="tab-hist">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Material</th>
+                <th>Qtd</th>
+                <th>Pago a</th>
+                <th>Recibo</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-hist">
+              <tr><td colspan="5" style="text-align:center">Carregando...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/material.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/saida.js"></script>
+</body>
+</html>
