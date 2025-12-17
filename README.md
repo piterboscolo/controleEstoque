@@ -71,13 +71,17 @@ O sistema usa **armazenamento em arquivo JSON** - simples e eficiente:
 
 > Salve as imagens na pasta `img/` com os nomes abaixo.
 
-![Dashboard](img/dashboard.png)
 
-![Cadastrar Material](img/cadastrar-material.png)
+<img width="1364" height="856" alt="001" src="https://github.com/user-attachments/assets/ed7b5795-33c4-463d-8db0-8abe9756a6e4" />
 
-![Saída de Materiais](img/saida-materiais.png)
+<img width="1355" height="921" alt="002" src="https://github.com/user-attachments/assets/77442d3b-be42-4fd6-ba2e-aab60b323131" />
 
-![Últimos Materiais Cadastrados](img/ultimos-materiais.png)
+
+<img width="1356" height="853" alt="003" src="https://github.com/user-attachments/assets/017ee95e-3641-4919-8a26-9435ec94b6e0" />
+
+
+<img width="1284" height="844" alt="004" src="https://github.com/user-attachments/assets/a4681b94-f5f5-47c1-9347-819efad86c87" />
+
 
 ## Requisitos
 
@@ -169,3 +173,4 @@ curl -X POST http://localhost:3000/api/materiais/<ID_DO_MATERIAL>/saida \
 ✅ Fácil de visualizar e editar manualmente  
 ✅ Rápido e eficiente para pequenos/médios volumes  
 ✅ Ideal para desenvolvimento e projetos pequenos  
+
